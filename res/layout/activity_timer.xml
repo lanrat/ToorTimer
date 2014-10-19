@@ -1,0 +1,91 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.vorsk.toortimer.TimerActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+    
+    <ImageView
+        android:id="@+id/background_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/toorcon_logo" />
+
+    <com.vorsk.toortimer.util.AutoResizeTextView
+        android:id="@+id/time_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="#F7F7F7"
+        android:maxLines="1" 
+        android:singleLine="true"
+        android:textSize="600sp"
+        android:ellipsize="none"
+        android:textStyle="bold" />
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+            
+            <Button
+                android:id="@+id/start_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="25dp"
+                android:background="@drawable/toor_button"
+                android:text="@string/start_button_start" />
+            
+            <Button
+                android:id="@+id/reset_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="25dp"
+                android:background="@drawable/toor_button"
+                android:text="@string/reset_button" />
+
+            <Button
+                android:id="@+id/time_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="25dp"
+                android:background="@drawable/toor_button"
+                android:text="@string/time_button" />
+            
+
+            
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
