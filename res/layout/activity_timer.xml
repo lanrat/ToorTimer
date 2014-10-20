@@ -63,6 +63,7 @@
                 android:background="@drawable/toor_button"
                 android:text="@string/start_button_start" />
             
+            <!-- 
             <Button
                 android:id="@+id/reset_button"
                 style="?metaButtonBarButtonStyle"
@@ -72,16 +73,37 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/toor_button"
                 android:text="@string/reset_button" />
+               -->
 
             <Button
-                android:id="@+id/time_button"
+                android:id="@+id/time_button0"
                 style="?metaButtonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
                 android:background="@drawable/toor_button"
-                android:text="@string/time_button" />
+                android:text="@string/time_button0" />
+            
+            <Button
+                android:id="@+id/time_button1"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/toor_button"
+                android:text="@string/time_button1" />
+            
+            <Button
+                android:id="@+id/time_button2"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/toor_button"
+                android:text="@string/time_button2" />
             
 
             

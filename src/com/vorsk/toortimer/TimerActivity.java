@@ -148,9 +148,9 @@ public class TimerActivity extends Activity {
 		// Upon interacting with UI controls, delay any scheduled hide()
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
-		Button time_button = (Button) findViewById(R.id.time_button);
-		time_button.setOnTouchListener(mDelayHideTouchListener);
-		time_button.setOnClickListener(new View.OnClickListener() {	 
+		Button time_button2 = (Button) findViewById(R.id.time_button2);
+		time_button2.setOnTouchListener(mDelayHideTouchListener);
+		time_button2.setOnClickListener(new View.OnClickListener() {	 
 			@Override
 			public void onClick(View v) {
 				ToorTimer.pauseTimer();
@@ -158,7 +158,33 @@ public class TimerActivity extends Activity {
 			}
 		});
 		
-		Button reset_button = (Button) findViewById(R.id.reset_button);
+		Button time_button1 = (Button) findViewById(R.id.time_button1);
+		time_button1.setOnTouchListener(mDelayHideTouchListener);
+		time_button1.setOnClickListener(new View.OnClickListener() {	 
+			@Override
+			public void onClick(View v) {
+				ToorTimer.timerStop();
+				setTimerColor(textNormalColor);
+				HOURS = 0;
+				MINUTES = 50;
+				updateTimerText(HOURS, MINUTES, 0);
+			}
+		});
+		
+		Button time_button0 = (Button) findViewById(R.id.time_button0);
+		time_button0.setOnTouchListener(mDelayHideTouchListener);
+		time_button0.setOnClickListener(new View.OnClickListener() {	 
+			@Override
+			public void onClick(View v) {
+				ToorTimer.timerStop();
+				setTimerColor(textNormalColor);
+				HOURS = 0;
+				MINUTES = 20;
+				updateTimerText(HOURS, MINUTES, 0);
+			}
+		});
+		
+		/*Button reset_button = (Button) findViewById(R.id.reset_button);
 		reset_button.setOnTouchListener(mDelayHideTouchListener);
 		reset_button.setOnClickListener(new View.OnClickListener() {	 
 			@Override
@@ -166,7 +192,7 @@ public class TimerActivity extends Activity {
 				ToorTimer.timerStop();
 				setTimerColor(textNormalColor);
 			}
-		});
+		});*/
 		
 		Button start_button = (Button) findViewById(R.id.start_button);
 		start_button.setOnTouchListener(mDelayHideTouchListener);
